@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>速录</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .logo {
+            margin-top: -160px;
+            margin-left: 28px;
+            font-size: 76px;
+            font-weight: bold;
+            background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 40px;
+
+            font-family: "xingkai" Quotes, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        }
+
+        .logo-desc {
+            color: #213547;
+            font-size: 24px;
+            letter-spacing: 40px;
+        }
+
+        .startBtn {
+            outline: none;
+            width: 170px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .backTime {
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent;
+            line-height: 100vh;
+            text-align: center;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .backTime h1 {
+            display: none;
+            font-size: 50px;
+        }
+
+        @keyframes backTimes {
+            0% {
+                transform: scale(1.5);
+            }
+
+            16% {
+                transform: scale(0.5);
+            }
+
+            32% {
+                transform: scale(1.5);
+            }
+
+            48% {
+                transform: scale(0.5);
+            }
+
+            56% {
+                transform: scale(1.5);
+            }
+
+            64% {
+                transform: scale(0.5);
+            }
+        }
+
+
+
+        /* 按钮样式 */
+        button {
+            text-decoration: none;
+            position: relative;
+            border: none;
+            font-size: 14px;
+            font-family: inherit;
+            cursor: pointer;
+            color: #fff;
+            width: 9em;
+            height: 3em;
+            line-height: 2em;
+            text-align: center;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 300%;
+            border-radius: 30px;
+            z-index: 1;
+        }
+
+        button:hover {
+            animation: ani 8s linear infinite;
+            border: none;
+        }
+
+        @keyframes ani {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }
+
+        button:before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            border-radius: 35px;
+            transition: 1s;
+        }
+
+        button:hover::before {
+            filter: blur(20px);
+        }
+
+        button:active {
+            background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div style="letter-spacing: 10px;">
+            <div class="logo">
+                速录
+            </div>
+            <div class="logo-desc">
+                便捷的录屏工具
+            </div>
+        </div>
+        <div style="margin-top: 200px;">
+            <button class="startBtn">
+                开始
+                <svg style="vertical-align: middle;" t="1718371949085" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4935" data-spm-anchor-id="a313x.search_index.0.i10.7da53a81RLvB5F" width="26" height="26"><path d="M586.666667 213.333333H53.333333a53.393333 53.393333 0 0 0-53.333333 53.333334v490.666666a53.393333 53.393333 0 0 0 53.333333 53.333334h533.333334a53.393333 53.393333 0 0 0 53.333333-53.333334V266.666667a53.393333 53.393333 0 0 0-53.333333-53.333334z m10.666666 544a10.666667 10.666667 0 0 1-10.666666 10.666667H53.333333a10.666667 10.666667 0 0 1-10.666666-10.666667V266.666667a10.666667 10.666667 0 0 1 10.666666-10.666667h533.333334a10.666667 10.666667 0 0 1 10.666666 10.666667z m399.72-536.8a52.746667 52.746667 0 0 0-53.613333 0.493334l-192 114a53.553333 53.553333 0 0 0-26.106667 45.853333v262.24a53.54 53.54 0 0 0 26.106667 45.853333l192 114a53.333333 53.333333 0 0 0 80.56-45.853333V266.88a52.746667 52.746667 0 0 0-26.946667-46.346667zM981.333333 757.12a10.666667 10.666667 0 0 1-16.113333 9.166667l-192-114a10.706667 10.706667 0 0 1-5.22-9.166667V380.88a10.706667 10.706667 0 0 1 5.22-9.166667l192-114a10.4 10.4 0 0 1 5.386667-1.54 11.006667 11.006667 0 0 1 5.333333 1.44 10.466667 10.466667 0 0 1 5.386667 9.266667z" fill="#68e1b2" p-id="4936" data-spm-anchor-id="a313x.search_index.0.i6.7da53a81RLvB5F" class=""></path></svg>
+            </button>
+        </div>
+
+
+
+        <div class="backTime">
+            <h1>3</h1>
+        </div>
+    </div>
+
+
+    <script>
+        const startBtn = document.querySelector(".startBtn")
+        const backTime = document.querySelector(".backTime")
+        const backTimeH1 = document.querySelector(".backTime h1")
+        let stream
+
+        startBtn.addEventListener("click", async () => {
+            // 由于涉及到用户的授权，所以是异步的
+            stream = await navigator.mediaDevices.getDisplayMedia({
+                video: true,
+                audio: true
+            })
+
+            let time = 3
+            backTimeH1.style.animation = "backTimes 3s"
+            backTimeH1.style.display = "block"
+            backTime.style.background="rgba(204, 204, 204,0.7)"
+            backTimeH1.innerHTML = 3
+
+            let timer = setInterval(() => {
+                time--
+                backTimeH1.innerHTML = time
+            }, 1100);
+
+            setTimeout(() => {
+                clearInterval(timer)
+                backTimeH1.style.animation = "none"
+                backTimeH1.style.display = "none"
+                backTime.style.background="transparent"
+                recordMedia()
+            }, 2900)
+        })
+
+        function recordMedia() {
+            const chunks = []
+            const record = new MediaRecorder(stream)
+
+            record.start()
+            // record.stop()
+
+            record.addEventListener("dataavailable", (e) => {
+                chunks.push(e.data)
+            })
+
+            record.addEventListener("stop", () => {
+                let fileName = ''
+                let flag = true;
+
+                while (flag) {
+                    fileName = prompt("请输入文件名:")
+                    if (isValidString(fileName)) {
+                        flag = false
+                    } else {
+                        flag = true
+                    }
+                }
+
+                const blob = new Blob(chunks, { type: "video/mp4" })
+                const url = URL.createObjectURL(blob)
+                const a = document.createElement("a")
+                a.href = url
+                a.download = `${fileName}.mp4`
+                a.click()
+                a.remove()
+            })
+        }
+
+        function isValidString(str) {
+            // 规则：
+            // - 字符串长度不超过 255 个字符
+            // - 字符串只能包含字母、数字、空格、句号（.`）、连字符（`-`）、下划线（`_`）
+            // - 字符串不能包含以下特殊字符：`\ / : * ? " < > |`
+            // - 字符串不能是 Windows 系统保留文件名
+
+            // 正则表达式：
+            const regex = /^[\w\s\.\-_]+$/;
+
+            // 检查字符串是否匹配正则表达式：
+            if (!regex.test(str)) {
+                alert("文件名的格式有误");
+                return false;
+            }
+
+            // 检查字符串长度：
+            if (str.length > 255) {
+                alert("文件名的长度有误");
+                return false;
+            }
+
+            // 检查字符串是否是 Windows 系统保留文件名：
+            const reservedNames = [
+                'CON', 'PRN', 'AUX', 'NUL',
+                'COM1', 'COM2', 'COM3', 'COM4', 'COM5', 'COM6', 'COM7', 'COM8', 'COM9', 'COM0',
+                'LPT1', 'LPT2', 'LPT3', 'LPT4', 'LPT5', 'LPT6', 'LPT7', 'LPT8', 'LPT9', 'LPT0'
+            ];
+            if (reservedNames.includes(str.toUpperCase())) {
+                return false;
+            }
+
+            // 字符串满足所有规则：
+            return true;
+        }
+    </script>
+</body>
+
+</html>
